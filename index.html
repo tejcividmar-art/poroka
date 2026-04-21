@@ -1,165 +1,177 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tadeja & Luka – Poroka</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tadeja & Luka - Poroka</title>
 
-<style>
-  body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    color: #333;
-    text-align: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #2c2c2c;
+  text-align: center;
 
-    /* 🌿 Nevtralno + pisani cvetovi */
-    background-color: #f4f6f5;
-    background-image: 
-      url('https://www.transparenttextures.com/patterns/garden.png');
-  }
+  background-image: url("images/ozadje.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #2c2c2c;
+      text-align: center;
+      background: linear-gradient(135deg, #fffdf5, #fff7e0);
+      overflow-x: hidden;
+    }
 
-  .hero {
-    padding: 80px 20px 40px;
-  }
+    /* cvetlični dekor */
+    .flowers {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,165,0,0.25) 0 8%, transparent 9%),
+        radial-gradient(circle at 80% 30%, rgba(255,215,0,0.25) 0 10%, transparent 11%),
+        radial-gradient(circle at 40% 70%, rgba(34,139,34,0.2) 0 12%, transparent 13%),
+        radial-gradient(circle at 70% 80%, rgba(255,140,0,0.2) 0 9%, transparent 10%);
+      z-index: -1;
+    }
 
-  h1 {
-    font-size: 54px;
-    margin: 0;
-    letter-spacing: 1px;
-    color: #2f3e46;
-  }
+    header {
+      padding: 60px 20px 20px;
+    }
 
-  .subtitle {
-    font-size: 20px;
-    margin-top: 10px;
-    color: #666;
-  }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0;
+    }
 
-  .date {
-    font-size: 26px;
-    margin-top: 20px;
-    color: #52796f;
-  }
+    h2 {
+      font-weight: 400;
+      margin-top: 10px;
+      color: #555;
+    }
 
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-  }
+    .countdown {
+      font-size: 2em;
+      margin: 30px 0;
+      font-weight: bold;
+      color: #d35400;
+    }
 
-  .card {
-    background: rgba(255,255,255,0.95);
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 14px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
-  }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
 
-  .card:hover {
-    transform: translateY(-4px);
-  }
+    a {
+      color: #1e7a4c;
+      text-decoration: none;
+    }
 
-  h2 {
-    color: #52796f;
-    margin-bottom: 15px;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .time {
-    font-size: 22px;
-    font-weight: bold;
-  }
+    .section-title {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #444;
+    }
 
-  .location {
-    margin-top: 10px;
-    color: #555;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #3a5a40;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .divider {
-    width: 60px;
-    height: 2px;
-    background: #52796f;
-    margin: 40px auto;
-  }
-
-  .footer {
-    margin: 60px 0 30px;
-    font-size: 14px;
-    color: #777;
-  }
-
-</style>
+    footer {
+      margin: 40px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="hero">
+<div class="flowers"></div>
+
+<header>
   <h1>Tadeja & Luka</h1>
-  <div class="subtitle">Vabljeni na najino poroko</div>
-  <div class="date">4. julij 2026</div>
+  <h2>4. 7. 2026</h2>
+
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<div class="card">
+  <div class="section-title">💒 Cerkvena poroka</div>
+  <p><strong>13:00</strong></p>
+  <p>
+    Cerkev Marijinega vnebovzetja<br/>
+    <a href="https://maps.app.goo.gl/eL6X4kKFETPricLRA" target="_blank">Odpri lokacijo</a>
+  </p>
+  <p><strong>Parkirišče:</strong><br/>
+    <a href="https://maps.app.goo.gl/Gq7xTJc2nbP4L91d8" target="_blank">Parkirišče 1</a><br/>
+    <a href="https://maps.app.goo.gl/KyD4ua4KuGzF8Y2v8" target="_blank">Parkirišče 2</a>
+  </p>
 </div>
 
-<div class="container">
-
-  <div class="card">
-    <h2>Cerkvena poroka</h2>
-    <div class="time">13:00</div>
-    <div class="location">
-      Cerkev Device Marije v Polju
-    </div>
-
-    <a href="https://maps.app.goo.gl/WEoNPvJWpfwovPGQ6" target="_blank">
-      📍 Lokacija
-    </a>
-
-    <p><strong>Parkiranje:</strong></p>
-
-    <a href="https://maps.app.goo.gl/RNsM9bomE8vR8xXR8" target="_blank">
-      🚗 Parkirišče 1
-    </a><br>
-
-    <a href="https://maps.app.goo.gl/d3vZi8YoY4amb55z9" target="_blank">
-      🚗 Parkirišče 2
-    </a>
-  </div>
-
-  <div class="card">
-    <h2>Civilna poroka</h2>
-    <div class="time">17:00</div>
-    <div class="location">
-      Kozolec Pr Jereb – Gorenja vas
-    </div>
-
-    <a href="https://maps.app.goo.gl/PAbr7t3DFpEsDx256" target="_blank">
-      📍 Lokacija
-    </a>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="card">
-    <h2>Program dneva</h2>
-    <p>13:00 – cerkvena poroka</p>
-    <p>17:00 – civilna poroka</p>
-  </div>
-
+<div class="card">
+  <div class="section-title">💍 Civilna poroka</div>
+  <p><strong>17:00</strong></p>
+  <p>
+    Kozolec Pr Jereb, Planina nad Horjulom<br/>
+    <a href="https://maps.app.goo.gl/PEBxiiUVzeU3rMfY6" target="_blank">Odpri lokacijo</a>
+  </p>
 </div>
 
-<div class="footer">
-  Veseliva se, da bova ta dan delila z vami 🌿
+<div class="card">
+  <div class="section-title">💌 Sporočilo</div>
+  <p>
+    Veseliva se, da bova ta dan lahko delila z vami! Se vidimo!
+  </p>
+  <p>
+    Prosiva za potrditev udeležbe:<br/>
+    📞 Luka: 041 888 879<br/>
+    📞 Tadeja: 068 603 753
+  </p>
 </div>
+
+<footer>
+  © Tadeja & Luka
+</footer>
+
+<script>
+  const targetDate = new Date("2026-07-04T00:00:00").getTime();
+
+  const countdown = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdown.innerHTML = "💍 Dan poroke je tu!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    countdown.innerHTML =
+      `${days} dni ${hours} ur ${minutes} min ${seconds} sek`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
 
 </body>
 </html>
