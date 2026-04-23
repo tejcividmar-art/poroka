@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tadeja & Luka - Poroka</title>
 
+  <!-- NOVA elegantna pisana pisava -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Elegantna pisava za ostalo besedilo -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
   <style>
@@ -16,10 +19,7 @@
       color: #2c2c2c;
       text-align: center;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
+      /* OZADJE IZ LOKALNE DATOTEKE */
       background-image: url("ozadje.png");
       background-size: cover;
       background-position: center;
@@ -49,7 +49,7 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.25em;
+      font-size: 6.5em;
       margin-bottom: 0;
       font-weight: 400;
       letter-spacing: 1px;
@@ -72,7 +72,6 @@
       margin: 20px auto;
       padding: 20px;
       max-width: 600px;
-      width: 90%;
       border-radius: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       backdrop-filter: blur(10px);
@@ -103,21 +102,11 @@
       color: #666;
     }
 
-    /* MOBILE FIX */
+    /* ✅ EDINA SPREMEMBA: MOBILE OPTIMIZACIJA */
     @media (max-width: 768px) {
 
-      body {
-        background-attachment: scroll;
-      }
-
-      /* 🔧 EDINA SPREMEMBA: popolno centriranje začetnega naslova */
       header {
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 60px 15px;
       }
 
       h1 {
@@ -141,6 +130,10 @@
 
       .script-title {
         font-size: 2em;
+      }
+
+      body {
+        background-attachment: scroll;
       }
     }
   </style>
