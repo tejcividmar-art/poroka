@@ -17,9 +17,13 @@
       margin: 0;
       font-family: 'Libre Baskerville', serif;
       color: #2c2c2c;
+
+      /* 🔧 SPREMEMBA: vse centrirano */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
 
-      /* OZADJE IZ LOKALNE DATOTEKE */
       background-image: url("ozadje.png");
       background-size: cover;
       background-position: center;
@@ -49,7 +53,7 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 6.5em;
+      font-size: 3.25em;
       margin-bottom: 0;
       font-weight: 400;
       letter-spacing: 1px;
@@ -72,6 +76,7 @@
       margin: 20px auto;
       padding: 20px;
       max-width: 600px;
+      width: 90%; /* 🔧 da lepo deluje na mobilniku */
       border-radius: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       backdrop-filter: blur(10px);
@@ -102,9 +107,7 @@
       color: #666;
     }
 
-    /* ✅ EDINA SPREMEMBA: MOBILE OPTIMIZACIJA */
     @media (max-width: 768px) {
-
       header {
         padding: 60px 15px;
       }
