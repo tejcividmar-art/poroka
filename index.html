@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tadeja & Luka - Poroka</title>
 
-  <!-- Tanjša, elegantna pisana pisava -->
-  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <!-- Elegantna pisana pisava -->
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- Cascadia Code (za ostalo besedilo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@300&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
+      font-family: 'Cascadia Code', monospace;
+      font-weight: 300;
       color: #2c2c2c;
       text-align: center;
       background: linear-gradient(135deg, #fffdf5, #fff7e0);
@@ -37,14 +41,16 @@
     }
 
     h1 {
-      font-family: 'Parisienne', cursive;
-      font-size: 4em;
+      font-family: 'Alex Brush', cursive;
+      font-size: 6em;
       margin-bottom: 0;
       font-weight: 400;
+      letter-spacing: 2px;
+      transform: scaleX(1.15);
+      display: inline-block;
     }
 
     h2 {
-      font-weight: 400;
       margin-top: 10px;
       color: #555;
     }
@@ -52,17 +58,20 @@
     .countdown {
       font-size: 2em;
       margin: 30px 0;
-      font-weight: bold;
+      font-weight: 300;
       color: #d35400;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.55);
       margin: 20px auto;
       padding: 20px;
       max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.4);
     }
 
     a {
@@ -74,11 +83,10 @@
       text-decoration: underline;
     }
 
-    /* VEČJA NASLOVA SEKCIJ (+50%) */
     .script-title {
-      font-family: 'Parisienne', cursive;
+      font-family: 'Alex Brush', cursive;
       font-weight: 400;
-      font-size: 2.7em; /* 1.8em -> +50% */
+      font-size: 2.7em;
       color: #444;
       margin-bottom: 10px;
     }
@@ -128,7 +136,7 @@
 
 <div class="card">
   <p>
-    Veseliva se, da bova ta dan lahko delila z vami! Se vidimo!
+    Največ nama pomeni, da se skupaj poveselimo. Če pa bi nama želeli kaj podariti, bova vesela kakšnega evra ali pa darila z osebno noto. Se vidimo!
   </p>
   <p>
     Prosiva za potrditev udeležbe:<br/>
