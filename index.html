@@ -47,7 +47,6 @@
       padding: 120px;
     }
 
-    /* PISANA IMENA - ELEGANTNEJŠA PISAVA */
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 6.5em;
@@ -89,7 +88,6 @@
       text-decoration: underline;
     }
 
-    /* PISANI NASLOVI SEKCIJ */
     .script-title {
       font-family: 'Great Vibes', cursive;
       font-weight: 400;
@@ -102,6 +100,41 @@
       margin: 40px 0;
       font-size: 0.9em;
       color: #666;
+    }
+
+    /* ✅ EDINA SPREMEMBA: MOBILE OPTIMIZACIJA */
+    @media (max-width: 768px) {
+
+      header {
+        padding: 60px 15px;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      .countdown {
+        font-size: 1.3em;
+      }
+
+      .card {
+        margin: 15px 10px;
+        padding: 15px;
+        border-radius: 20px;
+      }
+
+      .script-title {
+        font-size: 2em;
+      }
+
+      body {
+        background-attachment: scroll;
+      }
     }
   </style>
 </head>
