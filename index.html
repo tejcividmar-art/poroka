@@ -4,12 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>T & L - Poroka</title>
+  <title>Tadeja & Luka - Poroka</title>
 
-  <!-- NOVA elegantna pisana pisava -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <!-- Elegantna pisava za ostalo besedilo -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 
   <style>
@@ -19,7 +16,6 @@
       color: #2c2c2c;
       text-align: center;
 
-      /* OZADJE IZ LOKALNE DATOTEKE */
       background-image: url("ozadje.png");
       background-size: cover;
       background-position: center;
@@ -27,6 +23,11 @@
       background-attachment: fixed;
 
       overflow-x: hidden;
+
+      /* 🔧 EDINA SPREMEMBA: centriranje vsebine */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .flowers {
@@ -44,7 +45,7 @@
     }
 
     header {
-      padding: 120px;
+      padding: 25px 15px;
     }
 
     h1 {
@@ -53,7 +54,6 @@
       margin-bottom: 0;
       font-weight: 400;
       letter-spacing: 1px;
-      display: inline-block;
     }
 
     h2 {
@@ -63,7 +63,7 @@
 
     .countdown {
       font-size: 2em;
-      margin: 30px 0;
+      margin: 10px 0 15px 0;
       color: #d35400;
     }
 
@@ -102,11 +102,10 @@
       color: #666;
     }
 
-    /* ✅ EDINA SPREMEMBA: MOBILE OPTIMIZACIJA */
     @media (max-width: 768px) {
 
       header {
-        padding: 60px 15px;
+        padding: 20px 10px;
       }
 
       h1 {
